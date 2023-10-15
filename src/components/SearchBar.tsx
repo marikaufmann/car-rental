@@ -19,7 +19,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-const SearchBar = () => {
+const SearchBar = ({ allCars }: { allCars: CarProps[] }) => {
   const [manufacturer, setManufacturer] = useState("");
   const [model, setModel] = useState("");
   const [error, setError] = useState("");
@@ -54,9 +54,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form
-      className="searchbar"
-      onSubmit={handleSearch}>
+    <form className="searchbar" onSubmit={handleSearch}>
       <div className="searchbar__manufacturer">
         <SearchManufacturer
           manufacturer={manufacturer}
@@ -69,6 +67,7 @@ const SearchBar = () => {
           model={model}
           setModel={setModel}
           manufacturer={manufacturer}
+					allCars={allCars}
         />
         <SearchButton otherClasses="sm:hidden" />
       </div>

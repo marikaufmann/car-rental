@@ -31,7 +31,9 @@ export default async function Home({ searchParams }: HomeProps) {
       <Hero />
       <div className="searchbar-container--outer ">
         <div className="searchbar-container--inner" id="search">
-          <SearchBar />
+          <Await promise={promise}>
+            {(data) => <SearchBar allCars={data} />}
+          </Await>
           <div className="searchbar__filters-container">
             <CustomFilter title="fuel" options={fuels} />
             <CustomFilter title="year" options={yearsOfProduction} />

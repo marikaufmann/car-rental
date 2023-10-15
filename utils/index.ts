@@ -3,7 +3,7 @@ import { manufacturers } from '../constants/index';
 
 export async function fetchCars(filters: FilterProps) {
 	const headers = {
-		'X-RapidAPI-Key': '9d0b74eedcmsh5fc7256b22a87e3p12f099jsn2ab43b1276b2',
+		'X-RapidAPI-Key': process.env.X_RapidAPI_Key || '',
 		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
 	}
 	const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${filters.model}&make=${filters.manufacturer}&fuel_type=${filters.fuel}&year=${Number(filters.year)}&limit=${Number(filters.limit)}`, {
@@ -16,7 +16,7 @@ export async function fetchCars(filters: FilterProps) {
 }
 export async function fetchCarsByManufacturer(manufacturer: string) {
 	const headers = {
-		'X-RapidAPI-Key': '9d0b74eedcmsh5fc7256b22a87e3p12f099jsn2ab43b1276b2',
+		'X-RapidAPI-Key': process.env.X_RapidAPI_Key || '',
 		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
 	}
 	const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}`, {

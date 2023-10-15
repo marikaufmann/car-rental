@@ -38,5 +38,3 @@ const CarsContainer = ({ searchParams, allCars }: CarsProps) => {
 export default CarsContainer;
 
 
-
-// background-color: #f4f4f5;

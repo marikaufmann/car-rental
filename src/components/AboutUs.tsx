@@ -4,16 +4,16 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div className="aboutus lg:flex-row">
-      <div className="flex flex-col gap-8 lg:max-w-[400px]">
-        <h1 className="text-3xl text-extrabold">About Us</h1>
-        <p className="text-[#282828] text-sm">
+      <div className="flex flex-col gap-8 lg:max-w-[500px]">
+        <h1 className="text-3xl text-extrabold lg:text-4xl">About Us</h1>
+        <p className="text-[#282828] text-sm lg:text-base">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s. Lorem Ipsum is simply dummy text of the printing and
           typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text ever since the 1500s.
         </p>
-        <p className="text-[#282828] text-sm">
+        <p className="text-[#282828] text-sm lg:text-base">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s.

@@ -5,7 +5,7 @@ import { manufacturers } from "../../constants";
 import { Combobox, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { fetchCarsByManufacturer } from "../../utils";
-const SearchModel = ({ model, setModel, manufacturer }: SearchProps) => {
+const SearchModel = ({ model, setModel, manufacturer, allCars }: SearchProps) => {
   const [fetchedCars, setFetchedCars] = useState<CarProps[] | []>([]);
   const [query, setQuery] = useState("");
 
@@ -15,7 +15,7 @@ const SearchModel = ({ model, setModel, manufacturer }: SearchProps) => {
   function compareByModel(a: CarProps, b: CarProps) {
     return a.model.localeCompare(b.model);
   }
-  const sortedModels = !isDataEmpty ? fetchedCars.sort(compareByModel) : [];
+  const sortedModels = !isDataEmpty ? fetchedCars?.sort(compareByModel) : allCars?.sort(compareByModel);
 
   const uniqueModels: string[] = [];
   const unique = sortedModels?.filter((item) => {
@@ -49,7 +49,6 @@ const SearchModel = ({ model, setModel, manufacturer }: SearchProps) => {
     }
     return () => {};
   }, [manufacturer]);
-
   return (
     <div className="searchbar__model--wrapper">
       <Combobox value={model} onChange={setModel}>
