@@ -496,10 +496,8 @@
 }
 .footer__links {
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   gap: 80px;
-  width: 100%;
 }
 .footer__link {
   display: flex;
