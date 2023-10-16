@@ -431,7 +431,6 @@
   gap: 40px;
   padding: 45px 48px;
   background-color: #f3efec;
-	
 }
 .aboutus__images {
   display: grid;
@@ -443,17 +442,15 @@
   grid-template-columns: 1fr 40%;
   gap: 0.5rem;
   width: 50%;
-	min-height: 400px;
+  min-height: 400px;
 }
 .aboutus__images > div {
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-  
 }
 .aboutus__main-image {
   grid-area: b;
-  
 }
 
 .aboutus__sub-image--top {
@@ -478,7 +475,6 @@
   background-color: #0e1d21;
   padding: 45px 48px;
   color: #c1b3aa;
-
   margin: 0 auto;
 }
 .footer__links-container {
@@ -496,10 +492,8 @@
 }
 .footer__links {
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   gap: 80px;
-  width: 100%;
 }
 .footer__link {
   display: flex;
@@ -605,9 +599,9 @@
 }
 @media not screen and (min-width: 1024px) {
   .aboutus__images {
-		width: 100%;
-		min-height: 300px;
-	}
+    width: 100%;
+    min-height: 300px;
+  }
 }
 @media screen and (min-width: 1100px) {
   .hero__subtitle {
