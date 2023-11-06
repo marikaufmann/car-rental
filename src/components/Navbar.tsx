@@ -5,7 +5,7 @@ import { CustomButton } from ".";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar z-20">
       <Link href="/">
         <Image
           src="/logo.svg"

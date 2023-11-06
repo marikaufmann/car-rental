@@ -278,10 +278,8 @@
   flex-direction: column;
   text-align: center;
   gap: 5;
-  background-image: url("/hero-bg.jpg");
-  background-size: cover;
+	z-index: 20;
   min-height: 700px;
-  background-position: center;
   width: 100%;
   margin: 0 auto;
 }
@@ -513,7 +511,7 @@
 .footer__copyrights-link {
   display: flex;
   flex: 1;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 40px;
 }
 
@@ -522,6 +520,9 @@
 @media screen and (min-width: 576px) {
   .hero__title {
     font-size: 50px;
+  }
+	.navbar {
+    padding-bottom: 0px;
   }
 }
 
@@ -550,9 +551,7 @@
   }
 }
 @media screen and (min-width: 640px) {
-  .navbar {
-    padding-bottom: 0px;
-  }
+ 
   .searchbar__manufacturer {
     max-width: 300px;
   }
@@ -584,6 +583,7 @@
   }
 }
 @media screen and (min-width: 768px) {
+	
   .home__cars-wrapper {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -594,7 +594,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .footer__links {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 @media not screen and (min-width: 1024px) {
@@ -602,9 +602,10 @@
     width: 100%;
     min-height: 300px;
   }
+
 }
 @media screen and (min-width: 1100px) {
-  .hero__subtitle {
+	.hero__subtitle {
     display: block;
   }
 }

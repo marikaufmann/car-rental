@@ -4,12 +4,16 @@ import { CustomButton, Navbar } from ".";
 
 const Hero = () => {
   return (
+		<div>
+			<div className="min-h-[700px] w-full absolute">
+				<Image src='/hero-bg.jpg' fill className="object-cover" quality={100} priority alt='hero image'/>
+			</div>
     <div className="hero" id='hero'>
       <Navbar />
-      <div className="hero__container">
+      <div className="hero__container z-30">
         <h1 className="hero__title">
-          Find, book, rent a car—quick and{" "}
-          <span className="whitespace">super easy!</span>
+          Find, book, rent a car—quick{" "}
+          <span className="whitespace">and super easy!</span>
         </h1>
 
         <p className="hero__subtitle">
@@ -24,6 +28,7 @@ const Hero = () => {
         />
       </div>
     </div>
+		</div>
   );
 };
 

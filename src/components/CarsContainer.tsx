@@ -8,7 +8,6 @@ type CarsProps = {
 };
 const CarsContainer = ({ searchParams, allCars }: CarsProps) => {
   const isDataEmpty = !Array.isArray(allCars) || !allCars || allCars.length < 1;
-	console.log(allCars);
 	
   return (
     <>
