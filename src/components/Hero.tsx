@@ -6,7 +6,7 @@ const Hero = () => {
   return (
 		<div>
 			<div className="min-h-[700px] w-full absolute">
-				<Image src='/hero-bg.jpg' fill className="object-cover" quality={100} priority alt='hero image'/>
+				<Image src='/hero-bg.jpg' fill className="object-cover object-center" quality={100} priority alt='hero image'/>
 			</div>
     <div className="hero" id='hero'>
       <Navbar />
